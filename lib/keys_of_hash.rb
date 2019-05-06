@@ -7,6 +7,10 @@ class Hash
       self.map do |k, v|
         if v == item || v == item.to_i
           arr << k
+        # if arguments.to_s.split(", ").length > 1
+        #   arguments.any? { |thing| v == thing }
+        #     arr << k
+          # end
         end
       end
     end
