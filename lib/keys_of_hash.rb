@@ -2,10 +2,13 @@ require 'pry'
 
 class Hash
   def keys_of(arguments)
-    
-    arguments.split(", ").map do |item|
-      self.key(item)
-    end
+    self.map do |k, v|
+      arguments.split(", ").map do |item|
+        if self.key(item)
+          self.key(item)
+        end
+      end
+    end.uniq.flatten
   end
 end
 
