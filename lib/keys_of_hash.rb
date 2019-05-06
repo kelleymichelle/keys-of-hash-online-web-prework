@@ -3,8 +3,8 @@ require 'pry'
 class Hash
   def keys_of(arguments)
     
-    self.map do
-      self.key(arguments)
+    arguments.split(", ").map do |item|
+      self.key(item)
     end
   end
 end
