@@ -1,7 +1,7 @@
 require 'pry'
 
 class Hash
-  def keys_of(arguments)
+  def keys_of(*arguments)
     arr = [ ]
     arguments.to_s.split(", ").map do |item| 
       self.map do |k, v|
